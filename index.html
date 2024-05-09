@@ -1,14 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Byteq Front-End test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
- <nav>
-    
- </nav>
+
+<body class="bg-[#010101] bg-opacity-85">
+    <header class="  bg-[url(./img/Elements.png)] bg-no-repeat bg-cover text-white relative">
+        <nav id="menu"
+            class="lg:flex bg-[#261f17] lg:bg-transparent z-20 py-4 lg:py-0 hidden lg:justify-between justify-start lg:flex-row flex-col lg:items-center items-end absolute  lg:relative  min-w-[310px] w-[310px] lg:w-auto  pr-5 lg:pr-0 container mx-auto gap-2 my-10 right-[-330px] lg:right-0">
+            <div class="lg:flex justify-start items-center gap-2 w-full relative hidden">
+                <img src="./img/logo.png" alt="">
+                <p class="text-[32px] font-extrabold">Kwertz.</p>
+            </div>
+            <ul class="flex  lg:justify-end justify-start lg:flex-row flex-col lg:items-center items-end gap-8">
+                <li class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer "><a
+                        href="/home">Home</a> <img src="./img/Combined-Shape.png" alt=""></li>
+                <li class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer"><a
+                        href="#">Pages</a><img src="./img/Combined-Shape.png" alt=""></li>
+                <li class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer"><a
+                        href="#">Project</a><img src="./img/Combined-Shape.png" alt=""></li>
+                <li class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer"><a
+                        href="#">Blog</a><img src="./img/Combined-Shape.png" alt=""></li>
+                <li class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer"><a
+                        href="#">Contact</a></li>
+                <li class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer">
+                    <button><img src="./img/Combined-Shape2.png" alt=""></button>
+                    <input class="hidden" type="text">
+                </li>
+                <li class="flex justify-start items-center uppercase gap-1 cart text-lg font-medium cursor-pointer ">
+                    <button><img src="./img/Combined-Shape3.png" alt=""></button>
+                </li>
+                <li
+                    class="flex justify-start items-center uppercase gap-1 signup text-lg font-medium cursor-pointer py-3 rounded px-6">
+                    <a href="#">signup</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="flex justify-start items-center gap-2 w-full lg:hidden relative container m-auto">
+            <button id="menu-Open" class=" absolute cursor-pointer right-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <button id="menu-close" class="absolute cursor-pointer hidden right-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <img class="ml-8" src="./img/logo.png" alt="">
+            <p class="text-[32px] font-extrabold">Kwertz.</p>
+        </div>
+        <div class="md:grid flex flex-col grid-cols-2 justify-start items-center  gap-6 container mx-auto">
+            <div>
+                <h1
+                    class="2xl:text-[110px] hidden md:block lg:text-[60px] w-full md:text-[48px] text-[38px] font-extrabold uppercase">
+                    About <br>
+                    Our <span class="text-[#f03e1b]">studio</span></h1>
+                <h1
+                    class="2xl:text-[110px] pt-6 md:hidden block lg:text-[60px] w-full md:text-[48px] text-[38px] font-extrabold uppercase">
+                    About
+                    Our <span class="text-[#f03e1b]">studio</span></h1>
+            </div>
+            <div class="flex items-center justify-start md:pl-16 pl-0">
+                <div class="words">
+                    <label style="--i: 1"><span>G</span></label>
+                    <label style="--i: 2"><span>E</span></label>
+                    <label style="--i: 3"><span>T</span></label>
+                    <label style="--i: 4"><span>S</span></label>
+                    <label style="--i: 5"><span>T</span></label>
+                    <label style="--i: 6"><span>A</span></label>
+                    <label style="--i: 7"><span>T</span></label>
+                    <label style="--i: 8"><span>E</span></label>
+                    <label style="--i: 9"><span>D</span></label>
+                    <label style="--i: 10"><span>.</span></label>
+                    <label style="--i: 11"><span>G</span></label>
+                    <label style="--i: 12"><span>E</span></label>
+                    <label style="--i: 13"><span>T</span></label>
+                    <label style="--i: 14"><span>S</span></label>
+                    <label style="--i: 15"><span>T</span></label>
+                    <label style="--i: 16"><span>A</span></label>
+                    <label style="--i: 17"><span>T</span></label>
+                    <label style="--i: 18"><span>E</span></label>
+                    <label style="--i: 19"><span>D</span></label>
+                    <label style="--i: 20"><span>.</span></label>
+                </div>
+                <ul>
+                    <li
+                        class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer underline">
+                        <a href="#">Explore</a>
+                    </li>
+                    <li
+                        class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer underline">
+                        <a href="#">Our Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img class="container mx-auto h-[400px] rounded-xl mt-8 object-cover" src="./img/vector.png" alt="">
+    </header>
+    <section class="about-us-section container mx-auto bg-blend-overlay bg-[url(./img/Elements.png)] text-white  py-24">
+        <div class="md:grid flex-col flex grid-cols-2 justify-start md:items-center items-start gap-1 gap-y-10">
+            <div>
+                <p class="text-2xl font-medium">About Us</p>
+                <h2 class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold">Our Mission & Values</h2>
+            </div>
+            <div>
+                <p class="text-xl font-normal">Step into the realm of innovation and creativity at our digital studio.
+                    We
+                    are dedicated to crafting cutting-edge digital experiences that captivate, inspire, and elevate.
+                    From
+                    stunning UI/UX design to seamless website and app development, we bring your digital visions to
+                    life.
+                    Join us on a journey where design meets technology, and possibilities are limitless.</p>
+            </div>
+            <div class="rounded-xl overflow-hidden">
+                <img class="w-full h-full object-cover" src="./img/rectangle_4952.png" alt="">
+            </div>
+            <div class=" grid grid-cols-2 gap-8 md:px-5 px-0  h-full">
+                <div class="h-full w-full rounded-xl overflow-hidden">
+                    <img class="w-full h-full object-cover " src="./img/rectangle_4953.png" alt="">
+                </div>
+                <div class="h-full w-full rounded-xl overflow-hidden">
+                    <img class="w-full h-full object-cover " src="./img/rectangle_4954.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="md:grid flex flex-col grid-cols-3 justify-between md:items-center items-start">
+            <div class="flex justify-start items-center gap-7">
+                <p class="lg:text-[60px] w-[140px] md:text-[48px] text-[38px] font-extrabold uppercase">
+                    125<span class="text-[#f03e1b]">+</span></p>
+                <p class=" text-[16px]  uppercase">
+                    We Develop Over <span class="text-[#f03e1b]">125+ </span>Software</p>
+            </div>
+            <div class="flex justify-start items-center gap-7">
+                <p class="lg:text-[60px] w-[140px] md:text-[48px] text-[38px] font-extrabold uppercase">
+                    64<span class="text-[#f03e1b]">+</span></p>
+                <p class=" text-[16px]  uppercase">
+                    Global Clients & Trusted Us</p>
+            </div>
+            <div class="flex justify-start items-center gap-7">
+                <p class="lg:text-[60px] w-[140px] md:text-[48px] text-[38px] font-extrabold uppercase">
+                    122<span class="text-[#f03e1b]">+</span></p>
+                <p class=" text-[16px]  uppercase">
+                    Clients Reviews Our Software</p>
+            </div>
+        </div>
+    </section>
+    <section class=" bg-[#181818CC] bg-[url(./img/vector.png)] bg-blend-overlay text-white">
+        <div class="flex justify-center items-center gap-8 flex-col container mx-auto ">
+            <div class="our-company pt-10">
+                <div class="words">
+                    <label style="--i: 1"><span>E</span></label>
+                    <label style="--i: 2"><span>X</span></label>
+                    <label style="--i: 3"><span>P</span></label>
+                    <label style="--i: 4"><span>S</span></label>
+                    <label style="--i: 5"><span>L</span></label>
+                    <label style="--i: 6"><span>R</span></label>
+                    <label style="--i: 7"><span>E</span></label>
+                    <label style="--i: 8"><span></span></label>
+                    <label style="--i: 9"><span>O</span></label>
+                    <label style="--i: 10"><span>U</span></label>
+                    <label style="--i: 11"><span>R</span></label>
+                    <label style="--i: 12"><span></span></label>
+                    <label style="--i: 13"><span>C</span></label>
+                    <label style="--i: 14"><span>O</span></label>
+                    <label style="--i: 15"><span>M</span></label>
+                    <label style="--i: 16"><span>P</span></label>
+                    <label style="--i: 17"><span>A</span></label>
+                    <label style="--i: 18"><span>N</span></label>
+                    <label style="--i: 19"><span>Y</span></label>
+                    <label style="--i: 20"><span>A</span></label>
+                    <label style="--i: 21"><span>.</span></label>
+                    <label style="--i: 22"><span>W</span></label>
+                    <label style="--i: 23"><span>A</span></label>
+                    <label style="--i: 24"><span>T</span></label>
+                    <label style="--i: 25"><span>C</span></label>
+                    <label style="--i: 26"><span>H</span></label>
+                    <label style="--i: 27"><span></span></label>
+                    <label style="--i: 28"><span>&</span></label>
+                    <label style="--i: 29"><span></span></label>
+                    <div class="p-7 bg-white rounded-full video">
+                        <img src="./img/Polygon5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold text-center max-w-[650px]">Get Regular
+                Update In Service Growth. We
+                are with You.</h2>
+            <button class="bg-gradient-to-r uppercase from-[#fd8003] to-[#f2431a] py-2 px-6 rounded-md mb-14">
+                Discover More
+            </button>
+        </div>
+        <div class="bg-gradient-to-r from-[#fd8003] to-[#f2431a] py-4 flex justify-around items-center flex-wrap">
+            <p class="font-extrabold">logitech</p>
+            <img class="w-5" src="./img/Star2.png" alt="">
+            <p class="font-extrabold">autopilot</p>
+            <img class="w-5" src="./img/Star2.png" alt="">
+            <p class="font-extrabold">hippo</p>
+            <img class="w-5" src="./img/Star2.png" alt="">
+            <p class="font-extrabold">duolingo</p>
+            <img class="w-5" src="./img/Star2.png" alt="">
+            <p class="font-extrabold">Qapital</p>
+            <img class="w-5" src="./img/Star2.png" alt="">
+        </div>
+    </section>
+    <section id="pricing" class="text-white container mx-auto py-16">
+        <p class="text-2xl text-[#5d5d5d] text-center font-medium">Our Pricing</p>
+        <h2 class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold text-center max-w-[650px] mx-auto">Get Regular
+            Choose Our Easy &
+            Suitable Price</h2>
+        <div class="flex justify-center items-center gap-3 py-4">
+            <button class="uppercase transition-all hover:bg-gradient-to-r hover:from-[#fd8003] hover:to-[#f2431a] bg-[#3b3b3b] py-2 px-6 rounded-md mb-14">
+                Monthly
+            </button>
+            <button class="uppercase transition-all hover:bg-gradient-to-r hover:from-[#fd8003] hover:to-[#f2431a] bg-[#3b3b3b] py-2 px-6 rounded-md mb-14">
+                Yearly
+            </button>
+        </div>
+        <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-center flex flex-col">
+            <div class="card w-full">
+                <div
+                    class="flex justify-start items-center gap-2 bg-gradient-to-r from-[#fd8003] to-[#f2431a] py-6 rounded-t-lg  px-10 card-top">
+                    <div  class="p-3 rounded-lg bg-white text-orange-600 card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-medium">For individuals</p>
+                        <p class="font-bold text-xl">Standard</p>
+                    </div>
+                </div>
+                <div class="bg-[#1f1f1f]  px-10 rounded-b-lg card-bottom">
+                    <p><span class="text-[48px] font-bold">$99</span>/monthly</p>
+                    <p class="text-xl font-semibold">What’s included</p>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>All Professional Services</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>Up to 10+ Projects Done</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>Regular support</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>24/7 Helpline</p>
+                    </div>
+                    <div class="flex justify-center items-center py-4 pb-8">
+                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get It Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-full">
+                <div
+                    class="flex justify-start items-center gap-2 bg-gradient-to-r from-[#fd8003] to-[#f2431a] py-6 rounded-t-lg  px-10 card-top">
+                    <div  class="p-3 rounded-lg bg-white text-orange-600 card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                          </svg>
+                          
+                    </div>
+                    <div>
+                        <p class="font-medium">For Startups</p>
+                        <p class="font-bold text-xl">Professional</p>
+                    </div>
+                </div>
+                <div class="bg-[#1f1f1f]  px-10 rounded-b-lg card-bottom">
+                    <p><span class="text-[48px] font-bold">$99</span>/monthly</p>
+                    <p class="text-xl font-semibold">What’s included</p>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>All Professional Services</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>Up to 10+ Projects Done</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>Regular support</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>24/7 Helpline</p>
+                    </div>
+                    <div class="flex justify-center items-center py-4 pb-8">
+                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get It Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-full">
+                <div
+                    class="flex justify-start items-center gap-2 bg-gradient-to-r from-[#fd8003] to-[#f2431a] py-6 rounded-t-lg  px-10 card-top">
+                    <div  class="p-3 rounded-lg bg-white text-orange-600 card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" />
+                          </svg>
+                          
+                          
+                    </div>
+                    <div>
+                        <p class="font-medium">Big Company</p>
+                        <p class="font-bold text-xl">Enterprice</p>
+                    </div>
+                </div>
+                <div class="bg-[#1f1f1f]  px-10 rounded-b-lg card-bottom">
+                    <p><span class="text-[48px] font-bold">$99</span>/monthly</p>
+                    <p class="text-xl font-semibold">What’s included</p>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>All Professional Services</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>Up to 10+ Projects Done</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>Regular support</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2 pb-3">
+                        <span class="bg-[#3b3b3b] p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span>
+                        <p>24/7 Helpline</p>
+                    </div>
+                    <div class="flex justify-center items-center py-4 pb-8">
+                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get It Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feedback_slider" class="container mx-auto">
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carousel">
+              <li class="card">
+                <div class="img"><img src="images/img-1.jpg" alt="img" draggable="false"></div>
+                <h2>Blanche Pearson</h2>
+                <span>Sales Manager</span>
+              </li>
+              <li class="card">
+                <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+                <h2>Joenas Brauers</h2>
+                <span>Web Developer</span>
+              </li>
+              <li class="card">
+                <div class="img"><img src="images/img-3.jpg" alt="img" draggable="false"></div>
+                <h2>Lariach French</h2>
+                <span>Online Teacher</span>
+              </li>
+              <li class="card">
+                <div class="img"><img src="images/img-4.jpg" alt="img" draggable="false"></div>
+                <h2>James Khosravi</h2>
+                <span>Freelancer</span>
+              </li>
+              <li class="card">
+                <div class="img"><img src="images/img-5.jpg" alt="img" draggable="false"></div>
+                <h2>Kristina Zasiadko</h2>
+                <span>Bank Manager</span>
+              </li>
+              <li class="card">
+                <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
+                <h2>Donald Horton</h2>
+                <span>App Designer</span>
+              </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+          </div>
+    </section>
+    <script src="script.js"></script>
 </body>
+
 </html>
