@@ -7,13 +7,14 @@
     <title>Byteq Front-End test</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#010101] bg-opacity-85">
-    <header class="  bg-[url(./img/Elements.png)] bg-no-repeat bg-cover text-white relative">
+    <header class=" bg-[url(./img/Elements.png)] bg-no-repeat bg-cover text-white relative">
         <nav id="menu"
-            class="lg:flex bg-[#261f17] lg:bg-transparent z-20 py-4 lg:py-0 hidden lg:justify-between justify-start lg:flex-row flex-col lg:items-center items-end absolute  lg:relative  min-w-[310px] w-[310px] lg:w-auto  pr-5 lg:pr-0 container mx-auto gap-2 my-10 right-[-330px] lg:right-0">
+            class="lg:flex bg-[#261f17] lg:bg-transparent z-20 py-4 lg:py-0 hidden lg:justify-between justify-start lg:flex-row flex-col lg:items-center items-end absolute  lg:relative  min-w-[310px] w-[310px] lg:w-auto  pr-5 lg:pr-0 container mx-auto gap-2 my-10 right-[-330px] lg:right-0 ">
             <div class="lg:flex justify-start items-center gap-2 w-full relative hidden">
                 <img src="./img/logo.png" alt="">
                 <p class="text-[32px] font-extrabold">Kwertz.</p>
@@ -30,11 +31,17 @@
                 <li class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer"><a
                         href="#">Contact</a></li>
                 <li class="flex justify-start items-center uppercase gap-1  text-lg font-medium cursor-pointer">
-                    <button><img src="./img/Combined-Shape2.png" alt=""></button>
+                    <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                      </svg>
+                      </button>
                     <input class="hidden" type="text">
                 </li>
                 <li class="flex justify-start items-center uppercase gap-1 cart text-lg font-medium cursor-pointer ">
-                    <button><img src="./img/Combined-Shape3.png" alt=""></button>
+                    <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                      </svg>
+                      </button>
                 </li>
                 <li
                     class="flex justify-start items-center uppercase gap-1 signup text-lg font-medium cursor-pointer py-3 rounded px-6">
@@ -60,7 +67,7 @@
             <p class="text-[32px] font-extrabold">Kwertz.</p>
         </div>
         <div class="md:grid flex flex-col grid-cols-2 justify-start items-center  gap-6 container mx-auto">
-            <div>
+            <div data-aos="fade-right">
                 <h1
                     class="2xl:text-[110px] hidden md:block lg:text-[60px] w-full md:text-[48px] text-[38px] font-extrabold uppercase">
                     About <br>
@@ -70,7 +77,7 @@
                     About
                     Our <span class="text-[#f03e1b]">studio</span></h1>
             </div>
-            <div class="flex items-center justify-start md:pl-16 pl-0">
+            <div data-aos="fade-left" class="flex items-center justify-start md:pl-16 pl-0">
                 <div class="words">
                     <label style="--i: 1"><span>G</span></label>
                     <label style="--i: 2"><span>E</span></label>
@@ -105,10 +112,13 @@
                 </ul>
             </div>
         </div>
-        <img class="container mx-auto h-[400px] rounded-xl mt-8 object-cover" src="./img/vector.png" alt="">
+        <img data-aos="fade-down" class="container mx-auto h-[400px] rounded-xl mt-8 object-cover"
+            src="./img/vector.png" alt="">
     </header>
-    <section class="about-us-section container mx-auto bg-blend-overlay bg-[url(./img/Elements.png)] text-white  py-24">
-        <div class="md:grid flex-col flex grid-cols-2 justify-start md:items-center items-start gap-1 gap-y-10">
+    <section data-aos="fade-up"
+        class="about-us-section container mx-auto bg-blend-overlay bg-[url(./img/Elements.png)] text-white  py-24">
+        <div data-aos="fade-down-right"
+            class="md:grid flex-col flex grid-cols-2 justify-start md:items-center items-start gap-1 gap-y-10">
             <div>
                 <p class="text-2xl font-medium">About Us</p>
                 <h2 class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold">Our Mission & Values</h2>
@@ -122,19 +132,20 @@
                     life.
                     Join us on a journey where design meets technology, and possibilities are limitless.</p>
             </div>
-            <div class="rounded-xl overflow-hidden">
+            <div data-aos="flip-up" class="rounded-xl overflow-hidden">
                 <img class="w-full h-full object-cover" src="./img/rectangle_4952.png" alt="">
             </div>
             <div class=" grid grid-cols-2 gap-8 md:px-5 px-0  h-full">
-                <div class="h-full w-full rounded-xl overflow-hidden">
+                <div data-aos="flip-up" class="h-full w-full rounded-xl overflow-hidden">
                     <img class="w-full h-full object-cover " src="./img/rectangle_4953.png" alt="">
                 </div>
-                <div class="h-full w-full rounded-xl overflow-hidden">
+                <div data-aos="flip-up" class="h-full w-full rounded-xl overflow-hidden">
                     <img class="w-full h-full object-cover " src="./img/rectangle_4954.png" alt="">
                 </div>
             </div>
         </div>
-        <div class="md:grid flex flex-col grid-cols-3 justify-between md:items-center items-start">
+        <div data-aos="fade-up-left"
+            class="md:grid flex flex-col grid-cols-3 justify-between md:items-center items-start">
             <div class="flex justify-start items-center gap-7">
                 <p class="lg:text-[60px] w-[140px] md:text-[48px] text-[38px] font-extrabold uppercase">
                     125<span class="text-[#f03e1b]">+</span></p>
@@ -155,9 +166,38 @@
             </div>
         </div>
     </section>
-    <section class=" bg-[#181818CC] bg-[url(./img/vector.png)] bg-blend-overlay text-white">
+    <section data-aos="zoom-in" class="bg-[#181818] text-white py-24">
+        <div
+            class="md:grid md:grid-cols-2 flex-col flex justify-start md:items-center items-start md:gap-16 gap-8  container mx-auto ">
+            <div data-aos="zoom-in-down" class="w-full h-full">
+                <img class="w-full h-full object-cover" src="./img/Vector0.png" alt="">
+            </div>
+            <div data-aos="zoom-in-up">
+                <p class="text-2xl font-medium">Why Choose Us</p>
+                <h2 class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold">Our Commitment to Excellence</h2>
+                <p class="py-4 max-w-[80%]">Step into the realm of innovation and creativity at our digital studio. We are dedicated to crafting cutting-edge digital experiences that captivate, inspire, and elevate.</p>
+                <div class="flex justify-start items-center gap-2 pb-3">
+                    <img src="./img/check2.png" alt="">
+                    <p>User-Centric Approach</p>
+                </div>
+                <div class="flex justify-start items-center gap-2 pb-3">
+                    <img src="./img/check2.png" alt="">
+                    <p>Tailored Solutions & Expertise</p>
+                </div>
+                <div class="flex justify-start items-center gap-2 pb-3">
+                    <img src="./img/check2.png" alt="">
+                    <p>Cutting-Edge Development</p>
+                </div>
+                <div class="flex justify-start items-center gap-2 pb-3">
+                    <img src="./img/check2.png" alt="">
+                    <p>Transparent Communication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-aos="zoom-out" class=" bg-[#181818CC] bg-[url(./img/vector.png)] bg-blend-overlay text-white">
         <div class="flex justify-center items-center gap-8 flex-col container mx-auto ">
-            <div class="our-company pt-10">
+            <div data-aos="zoom-out-up" class="our-company pt-10">
                 <div class="words">
                     <label style="--i: 1"><span>E</span></label>
                     <label style="--i: 2"><span>X</span></label>
@@ -193,7 +233,8 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold text-center max-w-[650px]">Get Regular
+            <h2 data-aos="zoom-out-right"
+                class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold text-center max-w-[650px]">Get Regular
                 Update In Service Growth. We
                 are with You.</h2>
             <button class="bg-gradient-to-r uppercase from-[#fd8003] to-[#f2431a] py-2 px-6 rounded-md mb-14">
@@ -213,24 +254,28 @@
             <img class="w-5" src="./img/Star2.png" alt="">
         </div>
     </section>
-    <section id="pricing" class="text-white container mx-auto py-16">
-        <p class="text-2xl text-[#5d5d5d] text-center font-medium">Our Pricing</p>
-        <h2 class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold text-center max-w-[650px] mx-auto">Get Regular
+    <section data-aos="fade-up" data-aos-duration="1000" id="pricing" class="text-white container mx-auto py-16">
+        <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"
+            class="text-2xl text-[#5d5d5d] text-center font-medium">Our Pricing</p>
+        <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
+            class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold text-center max-w-[650px] mx-auto">Get Regular
             Choose Our Easy &
             Suitable Price</h2>
         <div class="flex justify-center items-center gap-3 py-4">
-            <button class="uppercase transition-all hover:bg-gradient-to-r hover:from-[#fd8003] hover:to-[#f2431a] bg-[#3b3b3b] py-2 px-6 rounded-md mb-14">
+            <button
+                class="uppercase transition-all hover:bg-gradient-to-r hover:from-[#fd8003] hover:to-[#f2431a] bg-[#3b3b3b] py-2 px-6 rounded-md mb-14">
                 Monthly
             </button>
-            <button class="uppercase transition-all hover:bg-gradient-to-r hover:from-[#fd8003] hover:to-[#f2431a] bg-[#3b3b3b] py-2 px-6 rounded-md mb-14">
+            <button
+                class="uppercase transition-all hover:bg-gradient-to-r hover:from-[#fd8003] hover:to-[#f2431a] bg-[#3b3b3b] py-2 px-6 rounded-md mb-14">
                 Yearly
             </button>
         </div>
         <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-center flex flex-col">
-            <div class="card w-full">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="card w-full">
                 <div
                     class="flex justify-start items-center gap-2 bg-gradient-to-r from-[#fd8003] to-[#f2431a] py-6 rounded-t-lg  px-10 card-top">
-                    <div  class="p-3 rounded-lg bg-white text-orange-600 card-icon">
+                    <div class="p-3 rounded-lg bg-white text-orange-600 card-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -282,18 +327,21 @@
                         <p>24/7 Helpline</p>
                     </div>
                     <div class="flex justify-center items-center py-4 pb-8">
-                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get It Now</button>
+                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get
+                            It Now</button>
                     </div>
                 </div>
             </div>
-            <div class="card w-full">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="card w-full">
                 <div
                     class="flex justify-start items-center gap-2 bg-gradient-to-r from-[#fd8003] to-[#f2431a] py-6 rounded-t-lg  px-10 card-top">
-                    <div  class="p-3 rounded-lg bg-white text-orange-600 card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
-                          </svg>
-                          
+                    <div class="p-3 rounded-lg bg-white text-orange-600 card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                        </svg>
+
                     </div>
                     <div>
                         <p class="font-medium">For Startups</p>
@@ -340,19 +388,22 @@
                         <p>24/7 Helpline</p>
                     </div>
                     <div class="flex justify-center items-center py-4 pb-8">
-                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get It Now</button>
+                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get
+                            It Now</button>
                     </div>
                 </div>
             </div>
-            <div class="card w-full">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="card w-full">
                 <div
                     class="flex justify-start items-center gap-2 bg-gradient-to-r from-[#fd8003] to-[#f2431a] py-6 rounded-t-lg  px-10 card-top">
-                    <div  class="p-3 rounded-lg bg-white text-orange-600 card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" />
-                          </svg>
-                          
-                          
+                    <div class="p-3 rounded-lg bg-white text-orange-600 card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" />
+                        </svg>
+
+
                     </div>
                     <div>
                         <p class="font-medium">Big Company</p>
@@ -399,7 +450,8 @@
                         <p>24/7 Helpline</p>
                     </div>
                     <div class="flex justify-center items-center py-4 pb-8">
-                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get It Now</button>
+                        <button class="card-button w-[94%] mx-auto py-3  border-2 border-orange-500 rounded-[30px]">Get
+                            It Now</button>
                     </div>
                 </div>
             </div>
@@ -408,42 +460,156 @@
     <section id="feedback_slider" class="container mx-auto">
         <div class="wrapper">
             <i id="left" class="fa-solid fa-angle-left"></i>
+            <p data-aos="zoom-out-right" class="text-2xl font-medium text-white">Testimonials</p>
+            <h2 data-aos="zoom-out-right" class="text-[32px] lg:text-[44px] 2xl:text-[64px] font-bold text-white pb-10">Our Happy Users Says</h2>
             <ul class="carousel">
-              <li class="card">
-                <div class="img"><img src="images/img-1.jpg" alt="img" draggable="false"></div>
-                <h2>Blanche Pearson</h2>
-                <span>Sales Manager</span>
-              </li>
-              <li class="card">
-                <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-                <h2>Joenas Brauers</h2>
-                <span>Web Developer</span>
-              </li>
-              <li class="card">
-                <div class="img"><img src="images/img-3.jpg" alt="img" draggable="false"></div>
-                <h2>Lariach French</h2>
-                <span>Online Teacher</span>
-              </li>
-              <li class="card">
-                <div class="img"><img src="images/img-4.jpg" alt="img" draggable="false"></div>
-                <h2>James Khosravi</h2>
-                <span>Freelancer</span>
-              </li>
-              <li class="card">
-                <div class="img"><img src="images/img-5.jpg" alt="img" draggable="false"></div>
-                <h2>Kristina Zasiadko</h2>
-                <span>Bank Manager</span>
-              </li>
-              <li class="card">
-                <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
-                <h2>Donald Horton</h2>
-                <span>App Designer</span>
-              </li>
+                <li data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="card p-6 ">
+                    <img src="./img/inverted-commas2.png" alt="">
+                    <span class="flex justify-start items-center py-2">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                    </span>
+                    <p class="text-lg font-medium py-2">Phosfluorecent synergiz holistic leaders skills before effective
+                        technology. Holist iterate just in time convergence.</p>
+                    <h3 class="text-2xl font-bold pb-2">Jenny Wilson</h3>
+                    <p>Technical Support Specialist</p>
+                </li>
+                <li data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom" class="card p-6 ">
+                    <img src="./img/inverted-commas2.png" alt="">
+                    <span class="flex justify-start items-center py-2">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                    </span>
+                    <p class="text-lg font-medium py-2">Phosfluorecent synergiz holistic leaders skills before effective
+                        technology. Holist iterate just in time convergence.</p>
+                    <h3 class="text-2xl font-bold pb-2">Arlene McCoy</h3>
+                    <p>Hardware Engineer</p>
+                </li>
+                <li data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom" class="card p-6 ">
+                    <img src="./img/inverted-commas2.png" alt="">
+                    <span class="flex justify-start items-center py-2">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                        <img src="./img/Star7.png" alt="">
+                    </span>
+                    <p class="text-lg font-medium py-2">Phosfluorecent synergiz holistic leaders skills before effective
+                        technology. Holist iterate just in time convergence.</p>
+                    <h3 class="text-2xl font-bold pb-2">Esther Howard</h3>
+                    <p>Site Reliability Engineer</p>
+                </li>
             </ul>
             <i id="right" class="fa-solid fa-angle-right"></i>
-          </div>
+        </div>
     </section>
+    <section data-aos="fade-up"
+    data-aos-duration="3000" class="container mx-auto ">
+        <div class="bg-gradient-to-r  from-[#392316] to-[#1e2630] py-10 rounded-lg">
+            <h2
+                class="text-[32px] lg:text-[44px] text-white mx-auto 2xl:text-[64px] font-bold text-center max-w-[650px]">
+                Have a project in mind?
+                Let’s get to work.</h2>
+            <span class="flex justify-center items-center pt-2 ">
+                <button class="bg-gradient-to-r uppercase text-white from-[#fd8003] to-[#f2431a] py-2 px-6 rounded-md">
+                    Discover More
+                </button>
+            </span>
+        </div>
+    </section>
+    <footer class="bg-[url(./img/Rectangle4.png)]">
+        <div
+            class="container mx-auto sm:grid sm:grid-cols-2 lg:grid-cols-4 flex flex-col justify-between items-start gap-6 py-24 text-white">
+            <div>
+                <div class="flex justify-start items-center gap-2 w-full relative mb-5">
+                    <img src="./img/logo.png" alt="">
+                    <p class="text-[32px] font-extrabold">Kwertz.</p>
+                </div>
+                <p>Dramatically orchestrate plug-and-play deliverables before proactive process improvements.</p>
+            </div>
+            <div>
+                <h4 class="sortcut-link font-bold text-xl">Services</h4>
+                <ul class="pt-5 flex flex-col justify-start items-start gap-3">
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">Web Development</a>
+                    </li>
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">Digital Marketing</a>
+                    </li>
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">Software Support</a>
+                    </li>
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">UI/UX Design</a>
+                    </li>
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">Plugin Developer</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="sortcut-link font-bold text-xl">Contact</h4>
+                <ul class="pt-5 flex flex-col justify-start items-start gap-3">
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">avro@mail.com</a>
+                    </li>
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">(505) 555-0125</a>
+                    </li>
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">6391 Elgin St. Celina, Delaware 10299</a>
+                    </li>
+                    <li class="flex justify-start items-center  gap-1 cursor-pointer ">
+                        <img class="rotate-[-90deg]" src="./img/Combined-Shape.png" alt="">
+                        <a href="#">+235 3654 7856</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="sortcut-link font-bold text-xl">Subscribe</h4>
+                <P class="pt-5">Phosfluorescentl aggregate bleed channels rather global.</P>
+                <div class="w-full bg-white relative rounded-sm mt-5">
+                    <input class="outline-none border-none p-4 w-full py-2 text-black" type="email" name="" id=""
+                        placeholder="Email">
+                    <span
+                        class="rounded-sm block p-[10px] cursor-pointer top-[3px] absolute z-50 right-[3px] bg-orange-500 w-fit">
+                        <img src="./img/Combined-Shape4.png" alt="">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <hr class="w-[96%] mx-auto h-1">
+        <div class="sm:flex justify-between items-center text-white container mx-auto pt-10 pb-6">
+            <div>
+                <a href="#">FAQ</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p class="text-end">All rights reserved ©2023 Uxaction </p>
+        </div>
+    </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

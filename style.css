@@ -78,7 +78,8 @@
     position: relative;
   }
   .wrapper i {
-    top: 50%;
+    z-index: 50;
+    top: 30px;
     height: 50px;
     width: 50px;
     cursor: pointer;
@@ -86,17 +87,17 @@
     position: absolute;
     text-align: center;
     line-height: 50px;
-    background: #fff;
+    background: #39312d;
+    color: white;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-    transform: translateY(-50%);
     transition: transform 0.1s linear;
   }
   .wrapper i:active{
-    transform: translateY(-50%) scale(0.85);
+    transform:  scale(0.85);
   }
   .wrapper i:first-child{
-    left: -22px;
+    right: 44px;
   }
   .wrapper i:last-child{
     right: -22px;
@@ -111,6 +112,8 @@
     border-radius: 8px;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    padding-top: 10px;
+    padding-bottom: 80px;
   }
   .carousel::-webkit-scrollbar {
     display: none;
@@ -126,43 +129,42 @@
     cursor: grab;
     user-select: none;
   }
-  .carousel :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .carousel .card {
     scroll-snap-align: start;
-    height: 342px;
+
     list-style: none;
-    background: #fff;
+    background: linear-gradient(to right, #1c1c1c, #3a322d);
     cursor: pointer;
     padding-bottom: 15px;
     flex-direction: column;
     border-radius: 8px;
+    color: white;
+    position: relative;
   }
-  .carousel .card .img {
-    background: #8B53FF;
-    height: 148px;
-    width: 148px;
-    border-radius: 50%;
+  .carousel .card::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #1c1c1c, #3a322d);
+    height: 20px;
+    width: 20px;
+    top: -10px;
+    left: 4 0px;
+    transform: rotate(45deg);
+    z-index: -1;
   }
-  .card .img img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
+  .sortcut-link{
+    position: relative;
   }
-  .carousel .card h2 {
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 30px 0 5px;
+  .sortcut-link::after{
+    content: '';
+    position: absolute;
+    background: orangered;
+    width: 40px;
+    height: 3px;
+    left: 0;
+    bottom: -4px;
   }
-  .carousel .card span {
-    color: #6A6D78;
-    font-size: 1.31rem;
-  }
+
   @media screen and (max-width: 900px) {
     .wrapper .carousel {
       grid-auto-columns: calc((100% / 2) - 9px);
